@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Game</title>
+
+    <link
+      rel="shortcut icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⌨️</text></svg>"
+      type="image/x-icon"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./styles/index.css" />
+    <script type="module" src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Welcome to speed type test</h1>
+      <section class="settings-container">
+        <button id="settings-btn" class="settings-btn">
+          <i class="fas fa-gear"></i>
+        </button>
+
+        <div class="settings">
+          <form id="settings-form">
+            <label for="difficulty">Choose Difficulty</label>
+            <select name="difficulty" id="difficulty">
+              <option value="easy" selected>Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            <br />
+            <label for="time-setting">Set Time</label>
+            <select name="time-setting" id="time-setting">
+              <option value="10" selected>10s</option>
+              <option value="30">30s</option>
+              <option value="60">60s</option>
+            </select>
+          </form>
+        </div>
+      </section>
+
+      <section id="container" class="container">
+        <h2>How fast can you Type? <span>⌨️</span></h2>
+        <div class="info-container">
+          <p class="time-container">Time Left : <span id="time-left"></span></p>
+          <p class="score-container">Score : <span id="score">0</span></p>
+        </div>
+
+        <button class="start-game">Click here to start!</button>
+        <small>Type the following</small>
+
+        <h1 class="display-text blured-text"></h1>
+        <input
+          type="text"
+          id="text"
+          class="text"
+          placeholder="Type the text here.."
+          autofocus
+        />
+
+        <div class="end-game-container" class="end-game-container">end</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        This project is built by Akshay Raichur,
+        <span><a href="https://github.com/akshayraichur">checkout</a></span> for
+        more
+      </p>
+    </footer>
+  </body>
+</html>
