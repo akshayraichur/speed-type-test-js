@@ -55,7 +55,7 @@ function addWordToDOM() {
 }
 
 function updateScore() {
-  scoreEl.textContent = ++score;
+  scoreEl.textContent = `Score : ${++score}`;
 }
 
 function updateTime() {
